@@ -23,12 +23,14 @@
         <th>Nom de l'élève</th>
         <th>âge</th>
         <?php
+        $age_total=0;
         foreach ($students as $name => $age)
-        { echo "<tr><td>".$name."</td><td>".$age."</td></tr>";}
-         ?>
+        {   echo "<tr><td>".$name."</td><td>".$age."</td></tr>";
+            $age_total += $age;}
+          ?>
 
     </table>
-
+<p>la moyenne est de <?php echo $age_total/count($students) ?> </p>
 
 </body>
 
